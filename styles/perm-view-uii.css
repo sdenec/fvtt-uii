@@ -1,0 +1,30 @@
+/* Permission Viewer */
+
+#scenes.sidebar-tab .directory-list .scene .permission-viewer,
+#sidebar.app .sidebar-directory .directory-list .scene .permission-viewer {
+  padding: .25rem;
+  margin: 0;
+  background: rgba(0,0,0,.2);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+}
+
+.permission-viewer-all,
+#scenes.sidebar-tab .directory-list .scene .permission-viewer-all,
+#sidebar.app .sidebar-directory .directory-list .scene .permission-viewer-all {
+  border-radius: 50%;
+  margin: 2px;
+  border-width: 5px;
+}
+
+.permission-viewer-user,
+#scenes.sidebar-tab .directory-list .scene .permission-viewer-user,
+#sidebar.app .sidebar-directory .directory-list .scene .permission-viewer-user {
+  border-radius: 50%;
+  margin: 2px;
+  width: 10px;
+  height: 10px;
+}

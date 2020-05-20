@@ -1,0 +1,20 @@
+{
+  "name": "fvtt-uii",
+  "title": "FVTT User Interface Improvements",
+  "description": "A module to improve the FVTT user interface in some places",
+  "author": "sdenec",
+  "version": "0.0.1",
+  "minimumCoreVersion": "0.5.5",
+  "compatibleCoreVersion": "0.5.5",
+  "system": "dnd5e",
+  "styles": [
+  	"./styles/fvtt-uii.css",
+  	"./styles/dnd5e-uii.css",
+  	"./styles/minor-qol-uii.css",
+  	"./styles/perm-view-uii.css",
+  	"./styles/vtta-uii.css",
+    "./styles/compendium-browser-uii.css",
+    "./styles/cub-uii.css",
+    "./styles/quicksearch-uii.css"
+  ]
+}

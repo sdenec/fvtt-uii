@@ -1,0 +1,32 @@
+/* Minor QOL Dmg Buttons */
+.dmgBtn-container {
+  margin-right: 1px;
+}
+
+.dmgBtn-container button {
+  margin: 0;
+}
+
+.dmgBtn-container button:hover {
+  box-shadow: 0 0 5px red inset;
+}
+
+.message-content .minor-qol-flex-container {
+  padding: 0;
+  /*flex-direction: row-reverse;*/
+  /*justify-content: flex-end;*/
+}
+
+.message-content .minor-qol-flex-container img {
+  border: 1px solid #222;
+  background: rgba(0,0,0,.5);
+  border-radius: .25rem;
+  overflow: hidden;
+  margin-right: .2rem;
+}
+
+.message-content .minor-qol-flex-container .minor-qol-target-npc {
+  /*order: -1;*/
+  color: red;
+  cursor: pointer;
+}
