@@ -1,7 +1,7 @@
 {
   "name": "fvtt-uii",
-  "title": "FVTT User Interface Improvements",
-  "description": "A module to improve the FVTT User Interface.",
+  "title": "FVTT UII",
+  "description": "User Interface Improvements for Foundry Virtual Tabletop",
   "author": "sdenec",
   "version": "0.1.0",
   "minimumCoreVersion": "0.6.0",
