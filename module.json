@@ -1,20 +1,20 @@
 {
-  "name": "fvtt-uii",
-  "title": "FVTT UII",
+  "name": "tidy_ui",
+  "title": "Tidy UI",
   "description": "User Interface Improvements for Foundry Virtual Tabletop",
   "author": "sdenec",
   "version": "0.1.0",
   "minimumCoreVersion": "0.6.0",
-  "compatibleCoreVersion": "0.6.0",
+  "compatibleCoreVersion": "0.6.2",
   "system": "dnd5e",
   "styles": [
-  	"./styles/fvtt-uii.css",
-  	"./styles/dnd5e-uii.css",
-  	"./styles/minor-qol-uii.css",
-  	"./styles/perm-view-uii.css",
-  	"./styles/vtta-uii.css",
-    "./styles/compendium-browser-uii.css",
-    "./styles/cub-uii.css",
-    "./styles/quicksearch-uii.css"
+  	"./styles/tidy_ui.css",
+  	"./styles/dnd5e_ui.css",
+  	"./styles/minor-qol_ui.css",
+  	"./styles/perm-view_ui.css",
+  	"./styles/vtta_ui.css",
+    "./styles/compendium-browser_ui.css",
+    "./styles/cub_ui.css",
+    "./styles/quicksearch_ui.css"
   ]
 }

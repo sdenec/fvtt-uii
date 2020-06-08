@@ -1,0 +1,14 @@
+/* VTTA Party Button */
+.directory-header #vtta-party-button {
+    display: block;
+    flex: 0 0 24px;
+    height: 24px;
+    display: flex;
+    padding: 0;
+    justify-content: center;
+    margin-right: .5rem;
+}
+
+.directory-header #vtta-party-button .fas {
+  margin: 0;
+}
