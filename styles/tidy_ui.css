@@ -1007,6 +1007,7 @@ li.folder > .folder-header h3 {
   box-shadow: 0 0 20px rgba(0,0,0,.5) inset;
   cursor: pointer;
   transition: box-shadow .3s ease;
+  height: 50px;
 }
 
 #scenes .scene h3 {
