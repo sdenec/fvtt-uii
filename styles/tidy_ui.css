@@ -1195,5 +1195,5 @@ li.folder > .folder-header h3 {
 
 /* Module Settings List */
 #client-settings section.content .settings-list {
-  max-height: unset;
+  /*max-height: unset;*/
 }
