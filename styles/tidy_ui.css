@@ -1012,9 +1012,9 @@ li.folder > .folder-header h3 {
 
 #scenes .scene h3 {
   padding: .5rem;
-  background: rgba(0,0,0,.2);
+  /*background: rgba(0,0,0,.2);*/
   font-size: 1rem;
-  text-shadow: 0 0 5px #000;
+  text-shadow: 0 0 5px #000, 0 0 5px #000;
   display: flex;
   height: 100%;
   width: 100%;
