@@ -20,10 +20,12 @@
   border-left: 1px solid #111;
   border-radius: 0;
   transition: border-radius .3s ease;
+  overflow: visible;
 }
 
 #sidebar.collapsed {
-  border-radius: 0 0 0 16px;
+  border-radius: 0 0 0 5px;
+  padding: 0;
 }
 
 /* ---------------------------------------- */
@@ -552,21 +554,29 @@ input[type=range]::-moz-range-thumb {
 
 #controls .control-tools {
   top: -1px;
-  left: 39px;
+  left: 33px;
   border: 1px solid #333;
   border-radius: 5px;
 }
 
 #controls .scene-control,
 #controls .control-tool {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
   font-size: 18px;
-  background: #444;
+  background: #333;
   box-shadow: none;
   margin: 0;
   border: none;
-  border-bottom: 1px solid #000;
+  /*border-bottom: 1px solid #000;*/
   border-radius: 0;
   overflow: hidden;
+}
+
+#controls .scene-control i,
+#controls .control-tool i {
+  font-size: 14px;
 }
 
 #controls .scene-control:first-child,
@@ -585,20 +595,31 @@ input[type=range]::-moz-range-thumb {
 #controls .scene-control:hover,
 #controls .control-tool:hover {
   border: none;
-  border-bottom: 1px solid #000;
-  box-shadow: 0 0 10px #ff6400 inset;
+  /*border-bottom: 1px solid #000;*/
+  /*box-shadow: 0 0 10px #ff6400 inset;*/
+  box-shadow: none;
+  color: #ff6400;
+}
+
+#controls .scene-control.active > i,
+#controls .control-tool.active > i,
+#controls .scene-control:hover > i,
+#controls .control-tool:hover > i {
+  text-shadow: 0 0 10px red;
 }
 
 #controls .control-tool.toggle {
   background: rgba(30, 0, 60, 1);
   border: none;
-  border-bottom: 1px solid #000;
+  /*border-bottom: 1px solid #000;*/
 }
 
 #controls .control-tool.toggle.active,
 #controls .control-tool.toggle:hover {
   background: rgba(60, 0, 120, 1);
-  box-shadow: 0 0 10px #9b8dff inset;
+  /*background: #555;*/
+  /*box-shadow: 0 0 10px #9b8dff inset;*/
+  box-shadow: none;
 }
 
 /* ----------------------------------------- */
@@ -685,23 +706,67 @@ input[type=range]::-moz-range-thumb {
 /* ----------------------------------------- */
 
 #sidebar-tabs {
-    margin: 0;
-    border-bottom: 1px solid #111;
-    box-shadow: 0 0 10px #000;
-    z-index: 1;
+  margin: 0;
+  border-bottom: 1px solid #111;
+  box-shadow: 0 0 10px #000;
+  z-index: 1;
+  padding: 0 8px 0 4px;
+  /*justify-content: flex-end;*/
+  justify-content: space-around;
+  height: 30px;
+  flex: 0 0 30px;
+}
+
+#sidebar.collapsed #sidebar-tabs {
+  padding: 0;
 }
 
 #sidebar-tabs > .item {
   cursor: url(../cursor/cursor_pointer-rc.cur), auto;
 }
 
-#sidebar-tabs > .item.active,
+#sidebar.collapsed #sidebar-tabs > .item {
+  padding: 0;
+  flex: 0 0 30px;
+}
+
+#sidebar-tabs > .item {
+  position: relative;
+  height: 28px;
+  flex: 1 0 22px;
+  line-height: 28px;
+  border: 1px solid transparent;
+  border-radius: 0;
+}
+
+#sidebar.collapsed #sidebar-tabs > .item.active,
+#sidebar-tabs > .item.active {
+  border: transparent;
+  box-shadow: none;
+  color: #ff6400;
+}
+
+#sidebar-tabs > .collapse {
+  border-radius: 0 0 0 16px;
+  position: absolute;
+  top: 0;
+  left: -16px;
+  height: 30px;
+  width: 16px;
+  line-height: 28px;
+  border-radius: 0 0 0 5px;
+  border: 1px solid #111;
+  border-right: none;
+  background: #333;
+}
+
+/*#sidebar-tabs > .item.active,
 #sidebar.collapsed #sidebar-tabs > .item.active {
   border: 1px solid #ff6400;
   box-shadow: 0 0 6px inset #ff6400;
   border-radius: 0;
 }
-
+*/
 .sidebar-tab .directory-header {
     padding: .5rem 1rem;
 }
