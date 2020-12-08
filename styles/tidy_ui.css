@@ -640,6 +640,7 @@ input[type=range]::-moz-range-thumb {
   background: #444;
   box-shadow: none;
   border-radius: 5px;
+  margin: 0 0 0 2px;
 }
 
 #hotbar #macro-list {
