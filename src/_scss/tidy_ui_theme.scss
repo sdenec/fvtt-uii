@@ -1,0 +1,13 @@
+/* Tidy UI Base Theme */
+@import '_parts/theme/_theme.scss';
+
+/* 5e specific theme */
+@import '_parts/systems/_dnd5e.scss';
+
+/* 5e modules specific */
+@import '_parts/modules/_perm-view.scss';
+@import '_parts/modules/_compendium-browser.scss';
+@import '_parts/modules/_cub.scss';
+@import '_parts/modules/_minor-qol.scss';
+@import '_parts/modules/_quicksearch.scss';
+@import '_parts/modules/_vtta.scss';

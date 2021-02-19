@@ -1,0 +1,1409 @@
+/* Tidy UI Base Theme */
+:root {
+  --scrollbar-color: rgba(200, 80, 0, 1);
+}
+
+:root {
+  scrollbar-color: #c85000;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+#sidebar {
+  right: 0;
+  top: 0;
+  height: 100vh;
+  background: #333;
+  /*additions*/
+  border: none;
+  border-left: 1px solid #111;
+  border-radius: 0;
+  transition: border-radius .3s ease;
+  overflow: visible;
+}
+
+#sidebar.collapsed {
+  border-radius: 0 0 0 5px;
+  padding: 0;
+}
+
+/* ---------------------------------------- */
+/*  Text                                    */
+/* ---------------------------------------- */
+/* Headers */
+/* Links */
+/* Paragraph */
+/* Lists */
+/*ul,
+ol {
+  margin: 0;
+  padding: 0;
+}*/
+/* HR separators */
+/* Blockquote */
+/* Secret Sections */
+/* ---------------------------------------- */
+/* Tables                                   */
+/* ---------------------------------------- */
+/* ----------------------------------------- */
+/* Scrollbar
+/* ----------------------------------------- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: 0 0 5px #999 inset;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  outline: none;
+  border-radius: 3px;
+  background: #ff6400;
+  /*#782e22*/
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.4) inset;
+}
+
+/* ----------------------------------------- */
+/* Images
+/* ----------------------------------------- */
+img {
+  border: none;
+  border-radius: 0;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+/**
+ * Basic Application Wrapper
+ */
+.app {
+  max-height: 100%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Pop-Out Window Application
+ */
+.window-app .window-header {
+  background: #333;
+}
+
+.window-app .window-content {
+  padding: 8px;
+  padding-bottom: 20px;
+}
+
+.window-app .window-resizable-handle {
+  bottom: 0;
+  right: 0;
+  background: #444;
+  padding: 0;
+  border: none;
+  border-radius: 5px 0 0 0;
+  cursor: nwse-resize;
+}
+
+.window-app .window-resizable-handle i.fas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* ----------------------------------------- */
+/*  Context Dropdown Menu
+/* ----------------------------------------- */
+/* ----------------------------------------- */
+/*  Player Config UI
+/* ----------------------------------------- */
+/* ----------------------------------------- */
+/*  Connected Players UI
+/* ----------------------------------------- */
+#players {
+  background: #444;
+  left: 16px;
+  bottom: 16px;
+}
+
+#players h3 {
+  margin: 0;
+  padding: 1px 3px 2px 4px;
+  border-bottom: 1px solid #333;
+  cursor: pointer;
+}
+
+#players ol {
+  margin: 1px 0 0 0;
+}
+
+#players ol li.player {
+  padding: 6px 5px 5px 9px;
+  cursor: url(../cursor/cursor_default-rc.cur), auto;
+}
+
+#players ol li.player:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#players ol .player-name {
+  line-height: 1;
+}
+
+#players ol .player-active {
+  margin: 3px 5px 0 0;
+}
+
+/* ---------------------------------------- */
+/* Notifications                            */
+/* ---------------------------------------- */
+/* ---------------------------------------- */
+/* Controls Reference                       */
+/* ---------------------------------------- */
+#controls-reference .window-content {
+  max-height: 75vh;
+}
+
+#controls-reference .notes {
+  margin: 0 0 1rem 0;
+}
+
+#controls-reference h3 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  padding-bottom: .5rem;
+  font-weight: bold;
+}
+
+#controls-reference ol.hotkey-list {
+  list-style: none;
+  padding: 0 0 1.5rem 0;
+}
+
+#controls-reference ol.hotkey-list > li {
+  margin: .5rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* ---------------------------------------- */
+/*  Forms                                   */
+/* ---------------------------------------- */
+/* ---------------------------------------- */
+/* Form Inputs                              */
+/* ---------------------------------------- */
+/* Text Input */
+input[type="text"],
+input[type="password"] {
+  cursor: text;
+}
+
+/* Checkboxes */
+/* Select Boxes */
+/* Text Areas */
+textarea {
+  cursor: text;
+}
+
+/* Buttons */
+button,
+input,
+select {
+  cursor: pointer;
+}
+
+button:disabled,
+input:disabled,
+select:disabled {
+  cursor: default;
+}
+
+/* Color Picker */
+/* File Pickers */
+/* Range Input */
+input[type=range]::-webkit-slider-thumb {
+  height: 12px;
+  width: 12px;
+  border-radius: 6px;
+}
+
+input[type=range]::-moz-range-thumb {
+  height: 12px;
+  width: 12px;
+  border-radius: 6px;
+}
+
+/**
+ * Dark mode inputs
+ */
+/* ----------------------------------------- */
+/* Tabbed Containers
+/* ----------------------------------------- */
+/* ----------------------------------------- */
+/* Dialog Window
+/* ----------------------------------------- */
+/* ----------------------------------------- */
+/* File Picker
+/* ----------------------------------------- */
+/* ----------------------------------------- */
+/* TinyMCE Editor
+/* ----------------------------------------- */
+.editor-edit {
+  display: none;
+  top: 0px;
+  right: 0px;
+  background: none;
+  border: none;
+  box-shadow: none;
+  cursor: text;
+}
+
+.editor-edit i {
+  font-size: 1em;
+  position: absolute;
+  top: 0;
+  right: 5px;
+  cursor: pointer;
+  text-shadow: none;
+}
+
+.editor:hover .editor-edit {
+  display: block;
+}
+
+.editor-content {
+  padding: 0 .5rem;
+}
+
+.dice-roll .dice-formula {
+  margin-bottom: 0;
+  border-radius: 3px 3px 0 0;
+}
+
+.dice-roll .dice-total {
+  border-top: none;
+  border-radius: 0 0 3px 3px;
+}
+
+.dice-roll .dice-total.success {
+  border-top: none;
+  background: rgba(0, 255, 0, 0.3);
+}
+
+.dice-roll .dice-total.failure {
+  border-top: none;
+  background: rgba(255, 0, 0, 0.3);
+}
+
+/* ----------------------------------------- */
+/*  Dice Tooltip
+/* ----------------------------------------- */
+.dice-tooltip .part-formula {
+  padding: 2px 0 0 3px;
+}
+
+.dice-tooltip .dice-rolls {
+  margin: 0;
+  padding: 5px 0;
+  overflow: hidden;
+  border-bottom: 1px solid #999;
+}
+
+/* ---------------------------------------- */
+/* HUD Application
+/* ---------------------------------------- */
+.placeable-hud input[type="text"] {
+  background: #444;
+  box-shadow: none;
+  border-radius: 5px;
+}
+
+.placeable-hud .control-icon {
+  box-sizing: border-box;
+  margin: 8px 0;
+  padding: 4px;
+  font-size: 24px;
+  height: 40px;
+  background: #444;
+  box-shadow: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.placeable-hud .control-icon i.fas {
+  position: static;
+}
+
+.placeable-hud .control-icon:first-child {
+  margin-top: 0;
+}
+
+.placeable-hud .control-icon:last-child {
+  margin-bottom: 0;
+}
+
+.placeable-hud .control-icon.active {
+  color: #fff;
+  border: 1px solid #ff6400;
+  background: #B94900;
+}
+
+.placeable-hud .control-icon.active > img {
+  opacity: 1;
+}
+
+/* ---------------------------------------- */
+/* Token HUD
+/* ---------------------------------------- */
+#token-hud .col {
+  height: calc(100% + 100px);
+  top: -50px;
+}
+
+#token-hud .col.left {
+  transform: translateX(-100%);
+  justify-content: flex-end;
+  align-items: flex-end;
+  left: -10px;
+}
+
+#token-hud .col.right {
+  justify-content: flex-end;
+  align-items: flex-start;
+  transform: translateX(100%);
+  right: -10px;
+}
+
+#token-hud .attribute.elevation {
+  position: relative;
+  width: 80px;
+  margin: 0 0 8px 0;
+}
+
+#token-hud .attribute i.fas {
+  top: -4px;
+  left: -1px;
+  font-size: 18px;
+  color: #FFF;
+  text-shadow: 0 0 4px #111;
+}
+
+#token-hud .control-icon.effects {
+  position: relative;
+}
+
+#token-hud .status-effects {
+  padding: 0;
+  width: 240px;
+  grid-template-columns: 40px 40px 40px 40px 40px 40px;
+  background: #444;
+  box-shadow: none;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#token-hud .status-effects .effect-control {
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+}
+
+#token-hud .status-effects .effect-control.active {
+  opacity: 1;
+  border: 1px solid #ff6400;
+}
+
+#token-hud .status-effects .effect-control.overlay {
+  opacity: 1;
+  background: #B94900;
+  border: 1px solid transparent;
+}
+
+/* ---------------------------------------- */
+/* Chat Bubbles
+/* ---------------------------------------- */
+#navigation {
+  top: 16px;
+  left: 120px;
+}
+
+#navigation #scene-list .scene {
+  float: left;
+  background: rgba(39, 39, 39, 0.95);
+  transition: box-shadow .3s ease;
+  line-height: 1.2;
+  padding: .5rem;
+}
+
+#navigation #scene-list .scene.gm {
+  background: #2B0652;
+  border: 1px solid #3a00ae;
+}
+
+#navigation .nav-item {
+  margin: 0 2px 8px 0;
+  border-radius: 5px;
+}
+
+#navigation #nav-toggle {
+  background: #444;
+}
+
+#navigation #nav-toggle:hover {
+  text-shadow: 0 0 10px #ff6400;
+  box-shadow: 0 0 10px #ff6400 inset;
+}
+
+#navigation #scene-list .scene:hover {
+  box-shadow: 0 0 10px #ff6400 inset;
+}
+
+#navigation #scene-list .scene.view,
+#navigation #scene-list .scene.view.gm,
+#navigation #scene-list .scene.context {
+  border: none;
+  border: 1px solid #ff6400;
+  background: #444;
+  box-shadow: 0 0 10px #ff6400 inset;
+}
+
+#navigation #scene-list .scene ul.scene-players {
+  left: 3px;
+  top: unset;
+  bottom: -6px;
+}
+
+#loading {
+  display: none;
+  top: 0 !important;
+  height: 16px;
+  background: #444;
+  border: 1px solid #111;
+  border-top: none;
+  box-shadow: 0 0 4px #b2c3ff;
+  border-radius: 0 0 5px 5px;
+}
+
+#loading label {
+  line-height: 20px;
+  top: -2px;
+  padding: 0;
+  font-size: 12px;
+  color: #FFF;
+  background: none;
+  text-shadow: 0 0 5px #000;
+}
+
+#loading #loading-bar {
+  position: static;
+  margin: 0;
+  height: 15px;
+  border-radius: 0 0 4px 4px;
+  border-top: none;
+}
+
+#loading #context {
+  left: 5px;
+}
+
+#loading #progress {
+  top: -2px;
+  right: 5px;
+  padding: 0;
+}
+
+/* ----------------------------------------- */
+/*  Main Menu
+/* ----------------------------------------- */
+/* ----------------------------------------- */
+/*  Scene Controls
+/* ----------------------------------------- */
+#controls {
+  top: 70px;
+  left: 16px;
+  padding: 0;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+#controls .control-tools {
+  top: -1px;
+  left: 33px;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+#controls .scene-control,
+#controls .control-tool {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 18px;
+  background: #333;
+  box-shadow: none;
+  margin: 0;
+  border: none;
+  /*border-bottom: 1px solid #000;*/
+  border-radius: 0;
+  overflow: hidden;
+}
+
+#controls .scene-control i,
+#controls .control-tool i {
+  font-size: 14px;
+}
+
+#controls .scene-control:first-child,
+#controls .control-tool:first-child {
+  border-radius: 4px 4px 0 0;
+}
+
+#controls .scene-control:last-child,
+#controls .control-tool:last-child {
+  border: none;
+  border-radius: 0 0 4px 4px;
+}
+
+#controls .scene-control.active,
+#controls .control-tool.active,
+#controls .scene-control:hover,
+#controls .control-tool:hover {
+  border: none;
+  /*border-bottom: 1px solid #000;*/
+  /*box-shadow: 0 0 10px #ff6400 inset;*/
+  box-shadow: none;
+  color: #ff6400;
+}
+
+#controls .scene-control.active > i,
+#controls .control-tool.active > i,
+#controls .scene-control:hover > i,
+#controls .control-tool:hover > i {
+  text-shadow: 0 0 10px red;
+}
+
+#controls .control-tool.toggle {
+  background: #1e003c;
+  border: none;
+  /*border-bottom: 1px solid #000;*/
+}
+
+#controls .control-tool.toggle.active,
+#controls .control-tool.toggle:hover {
+  background: #3c0078;
+  /*background: #555;*/
+  /*box-shadow: 0 0 10px #9b8dff inset;*/
+  box-shadow: none;
+}
+
+/* ----------------------------------------- */
+/*  Game Pause
+/* ----------------------------------------- */
+/* ---------------------------------------- */
+/*  Hotbar                                  */
+/* ---------------------------------------- */
+#hotbar {
+  bottom: 16px;
+  left: 230px;
+  height: 52px;
+}
+
+#hotbar .bar-controls {
+  background: #444;
+  box-shadow: none;
+  border-radius: 5px;
+  margin: 0 0 0 2px;
+}
+
+#hotbar #macro-list {
+  flex: 0 0 511px;
+  margin: 0;
+  border-left: none;
+  border-radius: 5px;
+}
+
+#hotbar .macro {
+  box-sizing: content-box;
+  border: none;
+  border-left: 1px solid #000;
+  border-radius: 0;
+  background: #444;
+  transition: box-shadow .3s ease;
+  cursor: url(../cursor/cursor_pointer-rc.cur), auto;
+}
+
+#hotbar .macro:first-child {
+  border-radius: 5px 0 0 5px;
+}
+
+#hotbar .macro:hover,
+#hotbar .macro.active:hover {
+  border: none;
+  border-left: 1px solid #000;
+}
+
+#hotbar .macro.active:hover {
+  box-shadow: 0 0 10px #ff6400 inset;
+}
+
+#hotbar .macro .macro-key {
+  top: 0;
+  right: 0;
+  padding: 1px 3px 2px 4px;
+  font-size: 12px;
+  border-radius: 0 0 0 7px;
+  font-weight: normal;
+  transition: color .3s ease;
+}
+
+#hotbar .macro:hover .macro-key {
+  color: #ff6400;
+}
+
+#hotbar .macro .macro-icon {
+  width: 100%;
+  height: 100%;
+  transition: border;
+}
+
+#hotbar .macro:hover .macro-icon {
+  border: 1px solid #ff6400;
+}
+
+/* ---------------------------------------- */
+/*  Watermark                               */
+/* ---------------------------------------- */
+/* ----------------------------------------- */
+/* Sidebar Tabs
+/* ----------------------------------------- */
+#sidebar-tabs {
+  margin: 0;
+  border-bottom: 1px solid #111;
+  box-shadow: 0 0 10px #000;
+  z-index: 1;
+  padding: 0 8px 0 4px;
+  /*justify-content: flex-end;*/
+  justify-content: space-around;
+  height: 30px;
+  flex: 0 0 30px;
+}
+
+#sidebar.collapsed #sidebar-tabs {
+  padding: 0;
+}
+
+#sidebar-tabs > .item {
+  cursor: url(../cursor/cursor_pointer-rc.cur), auto;
+}
+
+#sidebar.collapsed #sidebar-tabs > .item {
+  padding: 0;
+  flex: 0 0 30px;
+}
+
+#sidebar-tabs > .item {
+  position: relative;
+  height: 28px;
+  flex: 1 0 22px;
+  line-height: 28px;
+  border: 1px solid transparent;
+  border-radius: 0;
+}
+
+#sidebar.collapsed #sidebar-tabs > .item.active,
+#sidebar-tabs > .item.active {
+  border: transparent;
+  box-shadow: none;
+  color: #ff6400;
+}
+
+#sidebar-tabs > .collapse {
+  border-radius: 0 0 0 16px;
+  position: absolute;
+  top: 0;
+  left: -16px;
+  height: 30px;
+  width: 16px;
+  line-height: 28px;
+  border-radius: 0 0 0 5px;
+  border: 1px solid #111;
+  border-right: none;
+  background: #333;
+}
+
+/*#sidebar-tabs > .item.active,
+#sidebar.collapsed #sidebar-tabs > .item.active {
+  border: 1px solid #ff6400;
+  box-shadow: 0 0 6px inset #ff6400;
+  border-radius: 0;
+}
+*/
+.sidebar-tab .directory-header {
+  padding: .5rem 1rem;
+}
+
+.sidebar-tab .directory-list .directory-item h3,
+.sidebar-tab .directory-list .directory-item h4 {
+  font-size: .8rem;
+}
+
+.sidebar-tab .directory-list .directory-item img {
+  flex: 0 0 40px;
+  height: 40px;
+  width: 40px;
+  overflow: hidden;
+  object-position: 50% 50%;
+  margin: 4px .5rem 4px .5rem;
+  border: 1px solid #222;
+  border-radius: .25rem;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+#sidebar .sidebar-tab .directory-list .directory-item h4 {
+  margin-left: .5rem;
+}
+
+#sidebar .sidebar-tab .directory-list .directory-item img + h4 {
+  margin-left: 0;
+}
+
+.sidebar-tab .directory-list .entity {
+  border: none;
+}
+
+/*
+.sidebar-tab .directory-list .entity,
+.sidebar-tab .directory-list .entity:last-child,
+.sidebar-tab .directory-list .folder + .entity {
+  border: none;
+}
+*/
+.sidebar-tab .directory-footer {
+  margin: .5rem .25rem .5rem .25rem;
+}
+
+.sidebar-tab .directory-footer button {
+  margin: 0 .25rem .5rem .25rem;
+}
+
+.sidebar-tab .directory-list .subdirectory {
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-tab .directory-list .subdirectory .directory-item {
+  border: none;
+  position: relative;
+}
+
+.sidebar-tab .directory-list .subdirectory .directory-item.folder {
+  border-top: none;
+  border-bottom: none;
+  margin-top: 2px;
+}
+
+/* ----------------------------------------- */
+/*  Folders and Subfolders
+/* ----------------------------------------- */
+li.folder > .folder-header,
+li.folder.collapsed > .folder-header {
+  padding: .25rem .5rem;
+  border: none;
+  background: #333;
+  text-shadow: 0 0 2px #000;
+}
+
+li.folder.collapsed > .folder-header h3 {
+  text-shadow: inherit;
+}
+
+li.folder > .folder-header h3 {
+  font-size: .8rem;
+}
+
+/**
+ * Subdirectory Styles
+ */
+.subdirectory {
+  padding: 0;
+  margin: 0;
+  border: none;
+  margin-left: 1rem;
+}
+
+.subdirectory .folder-header {
+  border-radius: 5px 0 0 5px;
+}
+
+.subdirectory .subdirectory {
+  border-left: none;
+}
+
+.subdirectory .folder {
+  margin: 0;
+}
+
+.subdirectory .folder > ol {
+  margin-bottom: 1rem;
+}
+
+/* ----------------------------------------- */
+/*  1.0 - Chat Panel
+/* ----------------------------------------- */
+#chat {
+  padding-bottom: 1rem;
+}
+
+#chat-controls {
+  flex: 0 0 32px;
+  margin: 0;
+  padding: 0 .5rem;
+}
+
+#chat-controls i.fas {
+  font-size: 22px;
+  line-height: 22px;
+}
+
+#chat-controls div.roll-type-select {
+  display: flex;
+  align-items: center;
+}
+
+#chat-controls div.roll-type-select label {
+  display: block;
+  margin-left: .25rem;
+}
+
+#chat-controls div.roll-type-select select {
+  margin: 0 0 0 .25rem;
+  top: 0px;
+  width: 200px;
+}
+
+#chat-controls div.roll-type-select i.fas {
+  margin-right: 0;
+}
+
+#chat-controls .control-buttons {
+  display: flex;
+  align-items: center;
+  flex: 0 0 54px;
+}
+
+#chat-controls .control-buttons a {
+  margin-left: 4px;
+}
+
+#chat-controls .control-buttons .delete i.fas {
+  font-size: 19px;
+}
+
+#chat-log .message {
+  border: 1px solid #6f6c66;
+  margin: .25rem .5rem;
+  padding: .5rem;
+}
+
+#chat-log .message .message-header .message-sender {
+  color: #222;
+}
+
+#chat-log .message .message-header .message-timestamp {
+  margin-right: .2rem;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+#chat-log .message .message-header .message-delete {
+  color: rgba(0, 0, 0, 0.4);
+  transition: color .3s ease;
+}
+
+#chat-log .message .message-header .message-delete:hover {
+  text-shadow: none;
+  color: red;
+}
+
+#chat-log .message .message-content .flavor-text,
+#chat-log .message .message-header .flavor-text,
+#chat-log .message .message-header .whisper-to {
+  margin: 0 0 3px 0px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #4b4a44;
+}
+
+S
+#chat-log .message.whisper {
+  background: #e8e8ef;
+  border: 1px solid #545469;
+}
+
+#chat-log .message.blind {
+  background: #f5eaf5;
+  border: 1px solid #6b476b;
+}
+
+#chat-form {
+  margin: 0 0.25rem 0;
+}
+
+/**
+ * Roll Table Results to Chat Messages
+ */
+#chat-log .message .table-result img.result-image {
+  margin-right: 8px;
+  border-radius: .25rem;
+  border: 1px solid #222;
+  background: rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+/* ----------------------------------------- */
+/*  2.0 - Combat Tracker
+/* ----------------------------------------- */
+#combat #combat-round {
+  padding: .5rem 1rem;
+  border-bottom: 1px solid #444;
+}
+
+#combat #combat-tracker {
+  height: calc(100% - 94px);
+  padding: 0;
+}
+
+#combat #combat-controls {
+  padding-top: 0;
+}
+
+#combat #combat-controls a {
+  padding: .5rem .5rem 1rem .5rem;
+}
+
+#sidebar #combat li.combatant .token-name h4 {
+  margin: 0 0 2px 0;
+  font-size: 13px;
+  line-height: 13px;
+  flex: 0;
+}
+
+#combat li.combatant .token-name .combatant-control {
+  margin-right: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#combat li.combatant .token-name .token-effects {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 20px;
+}
+
+#combat li.combatant .token-name img.token-effect {
+  flex: 0 0 16px;
+  margin: 2px 4px 2px 0;
+}
+
+#combat .directory-list .actor {
+  padding: .25rem 0 .25rem .5rem;
+  align-items: center;
+  border-bottom: 1px solid #444;
+}
+
+#combat li.combatant.active {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid #ff6400;
+}
+
+/* ----------------------------------------- */
+/*  3.0 - Scenes Directory
+/* ----------------------------------------- */
+#scenes .scene {
+  border: none;
+  border-bottom: 1px solid #111;
+  margin: 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5) inset;
+  cursor: pointer;
+  transition: box-shadow .3s ease;
+  height: 50px;
+}
+
+#scenes .scene h3 {
+  padding: .5rem;
+  /*background: rgba(0,0,0,.2);*/
+  font-size: 1rem;
+  text-shadow: 0 0 5px #000, 0 0 5px #000;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+  white-space: normal;
+  justify-content: center;
+  align-items: center;
+}
+
+#scenes .scene:hover {
+  border: none;
+  border-bottom: 1px solid #111;
+  margin: 0;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.9) inset;
+  cursor: pointer;
+}
+
+#scenes .scene a {
+  transition: text-shadow .3s ease;
+}
+
+#scenes .scene:hover a {
+  text-shadow: 0 0 8px red;
+}
+
+/* ----------------------------------------- */
+/*  6.0 - Journal
+/* ----------------------------------------- */
+.window-app.image-popout .window-content {
+  margin: 0;
+  padding: 0;
+  background: #333;
+}
+
+.window-app.image-popout form {
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.window-app.image-popout .lightbox-image {
+  flex: 1;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  margin: 20px;
+}
+
+.window-app.image-popout .form-group {
+  position: static;
+  width: 100%;
+  max-width: initial;
+  border-radius: 0;
+  flex: 0;
+  height: 32px;
+}
+
+.window-app.image-popout .form-group.title {
+  top: 0;
+  order: -1;
+  margin: 0;
+}
+
+.window-app.image-popout .form-group.title input {
+  height: 32px;
+  text-align: center;
+  width: 100%;
+  flex: 1;
+  border-radius: 0;
+  padding: 0 16px;
+  border: none;
+}
+
+.window-app.image-popout .form-group.picker {
+  bottom: 0;
+  margin: 0;
+  height: 52px;
+  padding: 0 20px 20px 20px;
+  order: -1;
+  margin: 1px 0 0 0;
+}
+
+.window-app.image-popout .form-group button {
+  flex: 0 0 32px;
+  height: 32px;
+  margin: 0 0 0 1px;
+  order: 3;
+  border-radius: 0;
+  border: none;
+}
+
+.window-app.image-popout .form-group.picker input {
+  flex: 1;
+  background: rgba(255, 255, 240, 0.8);
+}
+
+.window-app.image-popout .form-group.picker button.file-picker + input[type="text"] {
+  height: 32px;
+  margin-right: 0 !important;
+  border-radius: 0;
+  padding: 0 16px;
+  border: none;
+}
+
+/* ----------------------------------------- */
+/*  7.0 - Playlists
+/* ----------------------------------------- */
+#playlists .global-volume {
+  flex: 0 0 152px;
+}
+
+#playlists li.playlist {
+  padding: 1rem;
+  border-bottom: 1px solid #222;
+  border-top: none;
+}
+
+#playlists li.playlist .playlist-header {
+  align-items: center;
+  text-decoration: none;
+  padding-bottom: .25rem;
+  margin-bottom: .5rem;
+  border-bottom: 1px solid #444;
+}
+
+#sidebar #playlists li.playlist h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+#playlists li.sound {
+  margin: .5rem 0 0;
+  align-items: center;
+}
+
+#sidebar #playlists li.sound h4 {
+  font-size: .8rem;
+}
+
+#playlists li.sound .sound-controls {
+  padding-left: .5rem;
+}
+
+/* ----------------------------------------- */
+/*  8.0 - Compendium Packs
+/* ----------------------------------------- */
+#compendium h3 {
+  padding: 1rem 1rem .25rem 1rem;
+  font-size: 1rem;
+  border-width: none;
+  border-bottom: 3px solid #666;
+  margin-bottom: .5rem;
+  background: none;
+}
+
+#compendium li.compendium-pack {
+  margin: 0;
+  padding: .5rem 2rem .5rem 1rem;
+}
+
+#compendium li.compendium-pack .pack-title {
+  margin: 0;
+}
+
+#compendium .compendium-footer {
+  font-size: .7rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-left: 23px;
+  margin-top: .1rem;
+}
+
+#compendium li.compendium-pack .status-icons {
+  position: absolute;
+  font-weight: normal;
+  color: #7a7971;
+  right: 1rem;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+/**
+ * Single Compendium Pack
+ */
+/* ----------------------------------------- */
+/*  Settings                                 */
+/* ----------------------------------------- */
+/* See FVTT UII Game Settings Module */
+/**
+ * Role Permission Configuration Form
+ */
+/* ----------------------------------------- */
+/*  Sidebar Pop-out                          */
+/* ----------------------------------------- */
+.app.sidebar-popout .window-content {
+  background: #333;
+}
+
+/* ----------------------------------------- */
+/*  Module Management                        */
+/* ----------------------------------------- */
+.package-list {
+  padding: 0 1rem 1rem 1rem;
+}
+
+.package-list .package {
+  position: relative;
+  padding: 1rem 0;
+  border-top: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.package-list .package:last-child {
+  border: none;
+}
+
+#module-management .package-list .package .package-metadata,
+.package-list .package .package-overview .package-description,
+.package-list .package .package-tags {
+  flex: 1 1 100%;
+  margin: 0;
+  line-height: 1.5;
+  margin-left: calc(13px + 1rem);
+  margin-top: .25rem;
+}
+
+.package-list .package .package-tags {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  text-align: left;
+  order: 1;
+  margin-top: .5rem;
+}
+
+.package-list .package .tag {
+  font-size: 11px;
+  margin: 0 .25rem 0 0;
+  padding: 1px 4px 0;
+  line-height: 16px;
+}
+
+#module-management .package-list .package-metadata {
+  list-style: none;
+}
+
+/* 5e specific theme */
+.dnd5e.chat-card .card-header img {
+  border: 1px solid #222;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  flex: 0 0 36px;
+  margin-right: 5px;
+  border-radius: .25rem;
+}
+
+/* 5e modules specific */
+/* Permission Viewer */
+#scenes.sidebar-tab .directory-list .scene .permission-viewer,
+#sidebar.app .sidebar-directory .directory-list .scene .permission-viewer {
+  padding: .25rem;
+  margin: 0;
+  /*background: rgba(0,0,0,.2);*/
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.permission-viewer-all,
+#scenes.sidebar-tab .directory-list .scene .permission-viewer-all,
+#sidebar.app .sidebar-directory .directory-list .scene .permission-viewer-all {
+  border-radius: 50%;
+  margin: 2px;
+  border-width: 5px;
+}
+
+.permission-viewer-user,
+#scenes.sidebar-tab .directory-list .scene .permission-viewer-user,
+#sidebar.app .sidebar-directory .directory-list .scene .permission-viewer-user {
+  border-radius: 50%;
+  margin: 2px;
+  width: 10px;
+  height: 10px;
+}
+
+#compendium .directory-footer {
+  margin: .5rem .5rem 1rem .5rem;
+}
+
+#compendium .directory-footer button {
+  margin: 0;
+}
+
+#compendium .directory-footer .compendium-browser-btn {
+  margin-top: .5rem;
+}
+
+#combat-utility-belt {
+  margin-top: 1rem;
+}
+
+/* Minor QOL Dmg Buttons */
+.dmgBtn-container {
+  margin-right: 1px;
+}
+
+.dmgBtn-container button {
+  margin: 0;
+}
+
+.dmgBtn-container button:hover {
+  box-shadow: 0 0 5px red inset;
+}
+
+.message-content .minor-qol-flex-container {
+  padding: 0;
+  /*flex-direction: row-reverse;*/
+  /*justify-content: flex-end;*/
+}
+
+.message-content .minor-qol-flex-container img {
+  border: 1px solid #222;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: .25rem;
+  overflow: hidden;
+  margin-right: .2rem;
+}
+
+.message-content .minor-qol-flex-container .minor-qol-target-npc {
+  /*order: -1;*/
+  color: red;
+  cursor: pointer;
+}
+
+.quick-search {
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+  padding: .5rem;
+  border: none;
+}
+
+.search-editable-input {
+  padding: 0 .25rem;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+/* VTTA Party Button */
+.directory-header #vtta-party-button {
+  display: block;
+  flex: 0 0 24px;
+  height: 24px;
+  display: flex;
+  padding: 0;
+  justify-content: center;
+  margin-right: .5rem;
+}
+
+.directory-header #vtta-party-button .fas {
+  margin: 0;
+}
