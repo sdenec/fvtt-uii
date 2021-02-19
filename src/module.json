@@ -1,5 +1,5 @@
 {
-  "name": "tidy_ui_theme",
+  "name": "tidy-ui-theme",
   "title": "Tidy UI Theme",
   "description": "VTTA Theme focused on a cleaner UI",
   "author": "sdenec",
@@ -10,7 +10,7 @@
   "styles": [
   	"./css/tidy_ui_theme.css"
   ],
-  "url": "https://github.com/sdenec/tidy_ui_theme",
-  "manifest": "https://github.com/sdenec/tidy_ui_theme/releases/latest/download/module.json",
-  "download": "https://github.com/sdenec/tidy_ui_theme/releases/latest/download/module.zip"
+  "url": "https://github.com/sdenec/tidy-ui-theme",
+  "manifest": "https://github.com/sdenec/tidy-ui-theme/releases/latest/download/module.json",
+  "download": "https://github.com/sdenec/tidy-ui-theme/releases/latest/download/module.zip"
 }
