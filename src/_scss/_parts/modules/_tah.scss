@@ -1,0 +1,255 @@
+div#token-action-hud {
+
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 80px;
+  left: 150px;
+  position: fixed;
+  height: auto;
+  width: auto;
+  padding: 0;
+  margin: 0;
+  background: #333;
+  border-radius: 3px;
+  font-size: small;
+  flex-wrap: wrap;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 1) inset, 0 0 5px rgba(0, 0, 0, .5);
+
+  div#tah-categories-menu {
+    display: flex;
+  }
+
+  &:hover>#tah-reposition,
+  &:hover>#tah-categories {
+    display: flex;
+    position: absolute;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #tah-reposition>.fa,
+  #tah-reposition>.fas,
+  #tah-categories>.fa,
+  #tah-categories>.fas {
+    color: #DDD;
+    padding: 0;
+    margin: 0;
+    text-shadow: 0 0 5px rgba(0,0,0,.5);
+    text-align: center;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #tah-categories {
+    left: 100%;
+  }
+
+  #tah-reposition {
+    right: 100%;
+    left: auto;
+  }
+
+  #tah-reposition:hover>i,
+  #tah-categories:hover>i {
+    color: #FF6400;
+  }
+
+  #tah-hudTitle {
+    color: #fff;
+    padding: 4px 8px;
+    margin: 0;
+    text-shadow: none;
+    text-align: left;
+    pointer-events: none;
+    position: static;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, .5);
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .tah-category {
+    position: relative;
+    display: block;
+    cursor: default;
+    border-right: 1px solid rgba(0, 0, 0, .5);
+  }
+
+  .tah-title-button {
+    display: block;
+    width: auto;
+    height: auto;
+    color: #efefef;
+    text-align: center;
+    background: none;
+    padding: 4px 8px;
+    font-size: 12px;
+    margin: 0;
+    border-radius: 0;
+    border: none;
+    line-height: 16px;
+
+    &:hover {
+      color: #FFF;
+      font-weight: normal;
+      color: #fff;
+      border: none;
+      border-bottom: none;
+      box-shadow: 0 0 0 1px #ff6400 inset;
+      cursor: default;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  .tah-content {
+    padding-top: 8px;
+  }
+
+  .tah-title-button>.fa,
+  .tah-title-button>.fas {
+    // visibility: hidden;
+    width: auto;
+    height: auto;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-size: 7px;
+    padding: 4px;
+    margin: 0;
+    border: none;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: auto;
+    transform: translate(40%, -40%);
+    background: #ff6400;
+    border-radius: 50%;
+    z-index: 10;
+  }
+
+  .tah-subcategory {
+    display: block;
+    // grid-template-columns: 150px auto;
+    // grid-auto-rows: auto;
+    min-height: 30px;
+    cursor: default;
+    margin: 0;
+    margin-top: 1px;
+  }
+
+  .tah-subtitle {
+    position: relative;
+    grid-column: 1;
+    padding: 4px 8px 0 8px;
+    margin: 0px;
+    min-width: 150px;
+    color: #fff;
+    text-shadow: none;
+    background: #444;
+    font-size: 12px;
+    text-align: left;
+    line-height: 12px;
+    border-radius: 4px 4px 0 0;
+  }
+
+  .tah-actions {
+    grid-column: 2;
+    display: flex;
+    flex-flow: row wrap;
+    /* align-items: center; */
+    width: 400px;
+    background: #444;
+    margin: 0;
+    padding: 1px;
+    border-radius: 0 0 4px 4px;
+  }
+
+  .tah-action {
+    flex-grow: 0;
+    flex-basis: auto;
+    padding: 0;
+    margin: 1px;
+    background: none;
+
+    &.active button {
+      background:#ff6400;
+    }
+  }
+
+  .tah-action button {
+    /* width: 100%; */
+    margin: 0;
+    padding: 1px;
+    line-height: 24px;
+    height: 26px;
+    min-width: 50px;
+    font-size: small;
+    text-decoration: none;
+    color: rgba(255,255,255,.95);
+    border: none;
+    /* overflow: hidden; */
+    background: #222;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    font-size: 12px;
+    white-space: nowrap;
+
+    span {
+      display: inline-block;
+      padding: 0 6px;
+    }
+  }
+
+  .tah-action button:hover {
+    font-weight: inherit;
+    color: #FFF;
+    border: none;
+    border-bottom: none;
+    box-shadow: 0 0 10px #ff6400;
+    box-shadow: 0 0 0 1px #ff6400 inset;
+    cursor: pointer;
+  }
+
+  .tah-action .tah-img {
+    border: 0;
+    border-radius: 3px;
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    display: block;
+    /* border-right: 1px solid rgba(2550,255,255,.25); */
+  }
+
+  .tah-info1 {
+    text-shadow: none;
+    color: greenyellow;
+    margin-left: 2px;
+  }
+
+  .tah-info2 {
+    text-shadow: none;
+    color: pink;
+    margin-left: 2px;
+  }
+
+  .tah-category.hover .tah-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    background: none;
+  }
+
+}
