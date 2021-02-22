@@ -1411,7 +1411,7 @@ S
 div#token-action-hud {
   z-index: 99;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   top: 80px;
   left: 150px;
@@ -1425,10 +1425,6 @@ div#token-action-hud {
   font-size: small;
   flex-wrap: wrap;
   box-shadow: 0 0 0 1px black inset, 0 0 5px rgba(0, 0, 0, 0.5);
-}
-
-div#token-action-hud div#tah-categories-menu {
-  display: flex;
 }
 
 div#token-action-hud:hover > #tah-reposition,
@@ -1481,6 +1477,7 @@ div#token-action-hud #tah-hudTitle {
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   font-size: 14px;
   font-weight: 600;
+  flex: 1 1 100%;
 }
 
 div#token-action-hud .tah-category {
@@ -1488,11 +1485,12 @@ div#token-action-hud .tah-category {
   display: block;
   cursor: default;
   border-right: 1px solid rgba(0, 0, 0, 0.5);
+  flex: 1;
 }
 
 div#token-action-hud .tah-title-button {
   display: block;
-  width: auto;
+  width: 100%;
   height: auto;
   color: #efefef;
   text-align: center;
@@ -1503,6 +1501,7 @@ div#token-action-hud .tah-title-button {
   border-radius: 0;
   border: none;
   line-height: 16px;
+  white-space: nowrap;
 }
 
 div#token-action-hud .tah-title-button:hover {
