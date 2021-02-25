@@ -1,0 +1,39 @@
+#scenes .scene {
+  border: none;
+  border-bottom: 1px solid #111;
+  margin: 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .5) inset;
+  cursor: pointer;
+  transition: box-shadow .3s ease;
+  height: 50px;
+}
+
+#scenes .scene h3 {
+  padding: .5rem;
+  /*background: rgba(0,0,0,.2);*/
+  font-size: 1rem;
+  text-shadow: 0 0 5px #000, 0 0 5px #000;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+  white-space: normal;
+  justify-content: center;
+  align-items: center;
+}
+
+#scenes .scene:hover {
+  border: none;
+  border-bottom: 1px solid #111;
+  margin: 0;
+  box-shadow: 0 0 40px rgba(0, 0, 0, .9) inset;
+  cursor: pointer;
+}
+
+#scenes .scene a {
+  transition: text-shadow .3s ease;
+}
+
+#scenes .scene:hover a {
+  text-shadow: 0 0 8px red;
+}

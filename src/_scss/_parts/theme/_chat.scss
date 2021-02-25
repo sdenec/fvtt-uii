@@ -1,0 +1,143 @@
+#chat {
+  padding-bottom: 1rem;
+}
+
+#chat-controls {
+  flex: 0 0 32px;
+  margin: 0;
+  padding: 0 .5rem;
+}
+
+#chat-controls i.fas {
+  font-size: 22px;
+  line-height: 22px;
+}
+
+#chat-controls div.roll-type-select {
+  display: flex;
+  align-items: center;
+}
+
+#chat-controls div.roll-type-select label {
+  display: block;
+  margin-left: .25rem;
+}
+
+#chat-controls div.roll-type-select select {
+  margin: 0 0 0 .25rem;
+  top: 0px;
+  width: 200px;
+}
+
+#chat-controls div.roll-type-select i.fas {
+  margin-right: 0;
+}
+
+#chat-controls .control-buttons {
+  display: flex;
+  align-items: center;
+  flex: 0 0 54px;
+}
+
+#chat-controls .control-buttons a {
+  margin-left: 4px;
+}
+
+#chat-controls .control-buttons .delete i.fas {
+  font-size: 19px;
+}
+
+#chat-log .message {
+  border: 1px solid #6f6c66;
+  margin: .25rem .5rem;
+  padding: .5rem;
+}
+
+#chat-log .message .message-header .message-sender {
+  color: #222;
+}
+
+#chat-log .message .message-header .message-timestamp {
+  margin-right: .2rem;
+  color: rgba(0, 0, 0, .4);
+}
+
+#chat-log .message .message-header .message-delete {
+  color: rgba(0, 0, 0, .4);
+  transition: color .3s ease;
+}
+
+#chat-log .message .message-header .message-delete:hover {
+  text-shadow: none;
+  color: red;
+}
+
+#chat-log .message .message-content .flavor-text,
+#chat-log .message .message-header .flavor-text,
+#chat-log .message .message-header .whisper-to {
+  margin: 0 0 3px 0px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #4b4a44;
+}
+
+#chat-log .message.whisper {
+  background: #e8e8ef;
+  border: 1px solid #545469;
+}
+
+#chat-log .message.blind {
+  background: #f5eaf5;
+  border: 1px solid #6b476b;
+}
+
+#chat-form {
+  margin: 0 0.25rem 0;
+}
+
+/**
+ * Roll Table Results to Chat Messages
+ */
+
+#chat-log .message .table-result img.result-image {
+  margin-right: 8px;
+  border-radius: .25rem;
+  border: 1px solid #222;
+  background: rgba(0, 0, 0, .3);
+  overflow: hidden;
+}
+
+.dice-roll .dice-formula {
+  margin-bottom: 0;
+  border-radius: 3px 3px 0 0;
+}
+
+.dice-roll .dice-total {
+  border-top: none;
+  border-radius: 0 0 3px 3px;
+}
+
+.dice-roll .dice-total.success {
+  border-top: none;
+  background: rgba(0, 255, 0, .3);
+}
+
+.dice-roll .dice-total.failure {
+  border-top: none;
+  background: rgba(255, 0, 0, .3);
+}
+
+/* ----------------------------------------- */
+/*  Dice Tooltip
+/* ----------------------------------------- */
+
+.dice-tooltip .part-formula {
+  padding: 2px 0 0 3px;
+}
+
+.dice-tooltip .dice-rolls {
+  margin: 0;
+  padding: 5px 0;
+  overflow: hidden;
+  border-bottom: 1px solid #999;
+}

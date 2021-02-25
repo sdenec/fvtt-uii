@@ -1,0 +1,49 @@
+li.folder>.folder-header,
+li.folder.collapsed>.folder-header {
+  padding: .25rem .5rem;
+  border: none;
+  background: #333;
+  text-shadow: 0 0 2px #000;
+}
+
+li.folder.collapsed>.folder-header h3 {
+  text-shadow: inherit;
+}
+
+li.folder>.folder-header h3 {
+  font-size: .8rem;
+}
+
+/**
+ * Subdirectory Styles
+ */
+
+.subdirectory {
+  padding: 0;
+  margin: 0;
+  border: none;
+  margin-left: 1rem;
+}
+
+.subdirectory .folder-header {
+  border-radius: 5px 0 0 5px;
+}
+
+// {
+//   padding: 0;
+//   margin: 0;
+//   border: none;
+//   margin-left: 1rem;
+// }
+
+.subdirectory .subdirectory {
+  border-left: none;
+}
+
+.subdirectory .folder {
+  margin: 0;
+}
+
+.subdirectory .folder>ol {
+  margin-bottom: 1rem;
+}

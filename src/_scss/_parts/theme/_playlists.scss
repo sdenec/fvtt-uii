@@ -1,0 +1,35 @@
+#playlists .global-volume {
+  flex: 0 0 152px;
+}
+
+#playlists li.playlist {
+  padding: 1rem;
+  border-bottom: 1px solid #222;
+  border-top: none;
+}
+
+#playlists li.playlist .playlist-header {
+  align-items: center;
+  text-decoration: none;
+  padding-bottom: .25rem;
+  margin-bottom: .5rem;
+  border-bottom: 1px solid #444;
+}
+
+#sidebar #playlists li.playlist h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+#playlists li.sound {
+  margin: .5rem 0 0;
+  align-items: center;
+}
+
+#sidebar #playlists li.sound h4 {
+  font-size: .8rem;
+}
+
+#playlists li.sound .sound-controls {
+  padding-left: .5rem;
+}

@@ -1,0 +1,29 @@
+/* ----------------------------------------- */
+/* TinyMCE Editor
+/* ----------------------------------------- */
+.editor-edit {
+  display: none;
+  top: 0px;
+  right: 0px;
+  background: none;
+  border: none;
+  box-shadow: none;
+  cursor: text;
+}
+
+.editor-edit i {
+  font-size: 1em;
+  position: absolute;
+  top: 0;
+  right: 5px;
+  cursor: pointer;
+  text-shadow: none;
+}
+
+.editor:hover .editor-edit {
+  display: block;
+}
+
+.editor-content {
+  padding: 0 .5rem;
+}

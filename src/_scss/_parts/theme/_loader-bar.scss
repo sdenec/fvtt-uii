@@ -1,0 +1,39 @@
+#loading {
+  display: none;
+  top: 0 !important;
+  height: 16px;
+  background: #444;
+  border: 1px solid #111;
+  border-top: none;
+  box-shadow: 0 0 4px #b2c3ff;
+  border-radius: 0 0 5px 5px;
+  
+  label {
+    line-height: 20px;
+    top: -2px;
+    padding: 0;
+    font-size: 12px;
+    color: #FFF;
+    background: none;
+    text-shadow: 0 0 5px #000;
+  }
+  
+  #loading-bar {
+    position: static;
+    margin: 0;
+    height: 15px;
+    border-radius: 0 0 4px 4px;
+    border-top: none;
+  }
+  
+  #context {
+    left: 5px;
+  }
+  
+  #progress {
+    top: -2px;
+    right: 5px;
+    padding: 0;
+  }
+
+}//#loading

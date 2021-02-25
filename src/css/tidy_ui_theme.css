@@ -3,51 +3,24 @@
   --scrollbar-color: rgba(200, 80, 0, 1);
 }
 
-:root {
-  scrollbar-color: #c85000;
-}
-
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   user-select: none;
 }
 
-#sidebar {
-  right: 0;
-  top: 0;
-  height: 100vh;
-  background: #333;
-  /*additions*/
+#logo {
+  position: absolute;
+  top: 10px;
+  left: 4px;
+  z-index: 60;
   border: none;
-  border-left: 1px solid #111;
-  border-radius: 0;
-  transition: border-radius .3s ease;
-  overflow: visible;
+  box-sizing: border-box;
+  width: 100px;
+  height: auto;
 }
 
-#sidebar.collapsed {
-  border-radius: 0 0 0 5px;
-  padding: 0;
-}
-
-/* ---------------------------------------- */
-/*  Text                                    */
-/* ---------------------------------------- */
-/* Headers */
-/* Links */
-/* Paragraph */
-/* Lists */
-/*ul,
-ol {
-  margin: 0;
-  padding: 0;
-}*/
-/* HR separators */
-/* Blockquote */
-/* Secret Sections */
-/* ---------------------------------------- */
-/* Tables                                   */
-/* ---------------------------------------- */
 /* ----------------------------------------- */
 /* Scrollbar
 /* ----------------------------------------- */
@@ -118,82 +91,6 @@ img {
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
-/* ----------------------------------------- */
-/*  Context Dropdown Menu
-/* ----------------------------------------- */
-/* ----------------------------------------- */
-/*  Player Config UI
-/* ----------------------------------------- */
-/* ----------------------------------------- */
-/*  Connected Players UI
-/* ----------------------------------------- */
-#players {
-  background: #444;
-  left: 16px;
-  bottom: 16px;
-}
-
-#players h3 {
-  margin: 0;
-  padding: 1px 3px 2px 4px;
-  border-bottom: 1px solid #333;
-  cursor: pointer;
-}
-
-#players ol {
-  margin: 1px 0 0 0;
-}
-
-#players ol li.player {
-  padding: 6px 5px 5px 9px;
-  cursor: url(../cursor/cursor_default-rc.cur), auto;
-}
-
-#players ol li.player:hover {
-  background: rgba(0, 0, 0, 0.2);
-}
-
-#players ol .player-name {
-  line-height: 1;
-}
-
-#players ol .player-active {
-  margin: 3px 5px 0 0;
-}
-
-/* ---------------------------------------- */
-/* Notifications                            */
-/* ---------------------------------------- */
-/* ---------------------------------------- */
-/* Controls Reference                       */
-/* ---------------------------------------- */
-#controls-reference .window-content {
-  max-height: 75vh;
-}
-
-#controls-reference .notes {
-  margin: 0 0 1rem 0;
-}
-
-#controls-reference h3 {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-  padding-bottom: .5rem;
-  font-weight: bold;
-}
-
-#controls-reference ol.hotkey-list {
-  list-style: none;
-  padding: 0 0 1.5rem 0;
-}
-
-#controls-reference ol.hotkey-list > li {
-  margin: .5rem 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-/* ---------------------------------------- */
-/*  Forms                                   */
-/* ---------------------------------------- */
 /* ---------------------------------------- */
 /* Form Inputs                              */
 /* ---------------------------------------- */
@@ -238,18 +135,81 @@ input[type=range]::-moz-range-thumb {
   border-radius: 6px;
 }
 
-/**
- * Dark mode inputs
- */
-/* ----------------------------------------- */
-/* Tabbed Containers
-/* ----------------------------------------- */
-/* ----------------------------------------- */
-/* Dialog Window
-/* ----------------------------------------- */
-/* ----------------------------------------- */
-/* File Picker
-/* ----------------------------------------- */
+#players {
+  background: #444;
+  left: 16px;
+  bottom: 16px;
+  width: 160px;
+}
+
+#players h3 {
+  margin: 0;
+  padding: 1px 3px 2px 4px;
+  border-bottom: 1px solid #333;
+  cursor: pointer;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+#players h3 i {
+  margin: 0 4px 0 0;
+}
+
+#players h3 .players-mode {
+  margin-left: auto;
+}
+
+#players ol {
+  margin: 1px 0 0 0;
+}
+
+#players ol li.player {
+  font-size: 12px;
+  line-height: 12px;
+  padding: 2px 4px;
+  cursor: url(../cursor/cursor_default-rc.cur), auto;
+}
+
+#players ol li.player:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#players ol .player-name {
+  line-height: 1;
+}
+
+#players ol .player-active {
+  margin: 1px 8px 0 3px;
+}
+
+/* ---------------------------------------- */
+/* Controls Reference                       */
+/* ---------------------------------------- */
+#controls-reference .window-content {
+  max-height: 75vh;
+}
+
+#controls-reference .notes {
+  margin: 0 0 1rem 0;
+}
+
+#controls-reference h3 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  padding-bottom: .5rem;
+  font-weight: bold;
+}
+
+#controls-reference ol.hotkey-list {
+  list-style: none;
+  padding: 0 0 1.5rem 0;
+}
+
+#controls-reference ol.hotkey-list > li {
+  margin: .5rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
 /* ----------------------------------------- */
 /* TinyMCE Editor
 /* ----------------------------------------- */
@@ -280,89 +240,6 @@ input[type=range]::-moz-range-thumb {
   padding: 0 .5rem;
 }
 
-.dice-roll .dice-formula {
-  margin-bottom: 0;
-  border-radius: 3px 3px 0 0;
-}
-
-.dice-roll .dice-total {
-  border-top: none;
-  border-radius: 0 0 3px 3px;
-}
-
-.dice-roll .dice-total.success {
-  border-top: none;
-  background: rgba(0, 255, 0, 0.3);
-}
-
-.dice-roll .dice-total.failure {
-  border-top: none;
-  background: rgba(255, 0, 0, 0.3);
-}
-
-/* ----------------------------------------- */
-/*  Dice Tooltip
-/* ----------------------------------------- */
-.dice-tooltip .part-formula {
-  padding: 2px 0 0 3px;
-}
-
-.dice-tooltip .dice-rolls {
-  margin: 0;
-  padding: 5px 0;
-  overflow: hidden;
-  border-bottom: 1px solid #999;
-}
-
-/* ---------------------------------------- */
-/* HUD Application
-/* ---------------------------------------- */
-.placeable-hud input[type="text"] {
-  background: #444;
-  box-shadow: none;
-  border-radius: 5px;
-}
-
-.placeable-hud .control-icon {
-  box-sizing: border-box;
-  margin: 8px 0;
-  padding: 4px;
-  font-size: 24px;
-  height: 40px;
-  background: #444;
-  box-shadow: none;
-  border-radius: 5px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.placeable-hud .control-icon i.fas {
-  position: static;
-}
-
-.placeable-hud .control-icon:first-child {
-  margin-top: 0;
-}
-
-.placeable-hud .control-icon:last-child {
-  margin-bottom: 0;
-}
-
-.placeable-hud .control-icon.active {
-  color: #fff;
-  border: 1px solid #ff6400;
-  background: #B94900;
-}
-
-.placeable-hud .control-icon.active > img {
-  opacity: 1;
-}
-
-/* ---------------------------------------- */
-/* Token HUD
-/* ---------------------------------------- */
 #token-hud .col {
   height: calc(100% + 100px);
   top: -50px;
@@ -427,58 +304,47 @@ input[type=range]::-moz-range-thumb {
   border: 1px solid transparent;
 }
 
-/* ---------------------------------------- */
-/* Chat Bubbles
-/* ---------------------------------------- */
-#navigation {
-  top: 16px;
-  left: 120px;
-}
-
-#navigation #scene-list .scene {
-  float: left;
-  background: rgba(39, 39, 39, 0.95);
-  transition: box-shadow .3s ease;
-  line-height: 1.2;
-  padding: .5rem;
-}
-
-#navigation #scene-list .scene.gm {
-  background: #2B0652;
-  border: 1px solid #3a00ae;
-}
-
-#navigation .nav-item {
-  margin: 0 2px 8px 0;
+.placeable-hud input[type="text"] {
+  background: #444;
+  box-shadow: none;
   border-radius: 5px;
 }
 
-#navigation #nav-toggle {
+.placeable-hud .control-icon {
+  box-sizing: border-box;
+  margin: 8px 0;
+  padding: 4px;
+  font-size: 24px;
+  height: 40px;
   background: #444;
+  box-shadow: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#navigation #nav-toggle:hover {
-  text-shadow: 0 0 10px #ff6400;
-  box-shadow: 0 0 10px #ff6400 inset;
+.placeable-hud .control-icon i.fas {
+  position: static;
 }
 
-#navigation #scene-list .scene:hover {
-  box-shadow: 0 0 10px #ff6400 inset;
+.placeable-hud .control-icon:first-child {
+  margin-top: 0;
 }
 
-#navigation #scene-list .scene.view,
-#navigation #scene-list .scene.view.gm,
-#navigation #scene-list .scene.context {
-  border: none;
+.placeable-hud .control-icon:last-child {
+  margin-bottom: 0;
+}
+
+.placeable-hud .control-icon.active {
+  color: #fff;
   border: 1px solid #ff6400;
-  background: #444;
-  box-shadow: 0 0 10px #ff6400 inset;
+  background: #B94900;
 }
 
-#navigation #scene-list .scene ul.scene-players {
-  left: 3px;
-  top: unset;
-  bottom: -6px;
+.placeable-hud .control-icon.active > img {
+  opacity: 1;
 }
 
 #loading {
@@ -520,12 +386,73 @@ input[type=range]::-moz-range-thumb {
   padding: 0;
 }
 
-/* ----------------------------------------- */
-/*  Main Menu
-/* ----------------------------------------- */
-/* ----------------------------------------- */
-/*  Scene Controls
-/* ----------------------------------------- */
+#navigation {
+  top: 16px;
+  left: 120px;
+}
+
+#navigation #scene-list .scene {
+  float: left;
+  background: #444;
+  transition: box-shadow .3s ease;
+  line-height: 12px;
+  padding: 4px 8px;
+  font-size: 12px;
+  display: block;
+}
+
+#navigation #scene-list .scene:hover {
+  box-shadow: 0 0 10px #ff6400 inset;
+}
+
+#navigation #scene-list .scene.gm {
+  background: #2B0652;
+  border: 1px solid #3a00ae;
+}
+
+#navigation #scene-list .scene.view, #navigation #scene-list .scene.view.gm, #navigation #scene-list .scene.context {
+  border: none;
+  border: 1px solid #ff6400;
+  background: #444;
+  box-shadow: 0 0 10px #ff6400 inset;
+}
+
+#navigation #scene-list .scene ul.scene-players {
+  left: 3px;
+  top: unset;
+  bottom: -6px;
+}
+
+#navigation #scene-list .scene ul.scene-players li {
+  height: 12px;
+  width: 12px;
+  font-size: 9px;
+}
+
+#navigation .nav-item {
+  margin: 0 0 8px 0;
+  border-radius: 0;
+}
+
+#navigation .nav-item:last-child {
+  border-radius: 0 5px 5px 0;
+}
+
+#navigation #nav-toggle {
+  flex: 0 0 22px;
+  padding: 0;
+  height: 22px;
+  line-height: 22px;
+  background: #444;
+  text-align: center;
+  border-radius: 5px 0 0 5px;
+}
+
+#navigation #nav-toggle:hover {
+  text-shadow: 0 0 10px #ff6400;
+  box-shadow: 0 0 10px #ff6400 inset;
+}
+
 #controls {
   top: 70px;
   left: 16px;
@@ -551,7 +478,6 @@ input[type=range]::-moz-range-thumb {
   box-shadow: none;
   margin: 0;
   border: none;
-  /*border-bottom: 1px solid #000;*/
   border-radius: 0;
   overflow: hidden;
 }
@@ -577,8 +503,6 @@ input[type=range]::-moz-range-thumb {
 #controls .scene-control:hover,
 #controls .control-tool:hover {
   border: none;
-  /*border-bottom: 1px solid #000;*/
-  /*box-shadow: 0 0 10px #ff6400 inset;*/
   box-shadow: none;
   color: #ff6400;
 }
@@ -593,41 +517,143 @@ input[type=range]::-moz-range-thumb {
 #controls .control-tool.toggle {
   background: #1e003c;
   border: none;
-  /*border-bottom: 1px solid #000;*/
 }
 
 #controls .control-tool.toggle.active,
 #controls .control-tool.toggle:hover {
   background: #3c0078;
-  /*background: #555;*/
-  /*box-shadow: 0 0 10px #9b8dff inset;*/
   box-shadow: none;
 }
 
 /* ----------------------------------------- */
 /*  Game Pause
 /* ----------------------------------------- */
-/* ---------------------------------------- */
-/*  Hotbar                                  */
-/* ---------------------------------------- */
+#pause {
+  width: auto;
+  padding: 0 20px;
+  border-radius: 10px;
+  height: 50px;
+  position: fixed;
+  bottom: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 10;
+  background: #ff6400;
+  box-shadow: 0 0 10px red;
+  display: none;
+}
+
+#pause::before {
+  display: block;
+  content: '';
+  widtH: 128px;
+  height: 128px;
+  background: #ff6400;
+  box-shadow: 0 0 10px red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+#pause::after {
+  display: block;
+  content: '';
+  background: #ff6400;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  border-radius: 10px;
+}
+
+#pause.paused {
+  display: block;
+}
+
+#pause img {
+  position: absolute;
+  top: calc(50% - 64px);
+  left: calc(50% - 64px);
+  height: 128px;
+  width: 128px;
+  opacity: .5;
+  border: none;
+  padding: 15px;
+  -webkit-animation: rotation 5s infinite linear;
+  z-index: 3;
+}
+
+#pause h3 {
+  margin: 0;
+  font-size: 2em;
+  font-weight: normal;
+  line-height: 50px;
+  text-align: center;
+  position: relative;
+  z-index: 70;
+  color: #fff;
+  text-shadow: 0px 0px 5px red;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
 #hotbar {
   bottom: 16px;
-  left: 230px;
-  height: 52px;
+  left: 186px;
+  height: 40px;
+  width: 454px;
 }
 
 #hotbar .bar-controls {
   background: #444;
   box-shadow: none;
-  border-radius: 5px;
-  margin: 0 0 0 2px;
+  border-radius: 0;
+  margin: 0;
+}
+
+#hotbar #hotbar-directory-controls {
+  border-radius: 5px 0 0 5px;
+}
+
+#hotbar #hotbar-directory-controls a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 20px;
+}
+
+#hotbar #hotbar-page-controls {
+  border-radius: 0 5px 5px 0;
+}
+
+#hotbar #hotbar-page-controls a.page-control {
+  font-size: 13px;
+  line-height: 13px;
+  height: 13px;
+}
+
+#hotbar #hotbar-page-controls .page-number {
+  font-size: 12px;
+  line-height: 12px;
+}
+
+#hotbar #action-bar {
+  height: 40px;
 }
 
 #hotbar #macro-list {
-  flex: 0 0 511px;
+  flex: 0 0 389px;
   margin: 0;
   border-left: none;
-  border-radius: 5px;
+  border-right: none;
+  border-radius: 0;
 }
 
 #hotbar .macro {
@@ -638,16 +664,21 @@ input[type=range]::-moz-range-thumb {
   background: #444;
   transition: box-shadow .3s ease;
   cursor: url(../cursor/cursor_pointer-rc.cur), auto;
+  flex: 0 0 38px;
+  height: 38px;
 }
 
 #hotbar .macro:first-child {
-  border-radius: 5px 0 0 5px;
+  border: none;
 }
 
-#hotbar .macro:hover,
-#hotbar .macro.active:hover {
+#hotbar .macro:hover, #hotbar .macro.active:hover {
   border: none;
   border-left: 1px solid #000;
+}
+
+#hotbar .macro:hover:first-child, #hotbar .macro.active:hover:first-child {
+  border-left: none;
 }
 
 #hotbar .macro.active:hover {
@@ -678,12 +709,25 @@ input[type=range]::-moz-range-thumb {
   border: 1px solid #ff6400;
 }
 
-/* ---------------------------------------- */
-/*  Watermark                               */
-/* ---------------------------------------- */
-/* ----------------------------------------- */
-/* Sidebar Tabs
-/* ----------------------------------------- */
+#sidebar {
+  right: 0;
+  top: 0;
+  height: 100vh;
+  background: #333;
+  /*additions*/
+  border: none;
+  border-left: 1px solid #111;
+  border-radius: 0;
+  transition: border-radius .3s ease;
+  overflow: visible;
+  z-index: 100;
+}
+
+#sidebar.collapsed {
+  border-radius: 0 0 0 5px;
+  padding: 0;
+}
+
 #sidebar-tabs {
   margin: 0;
   border-bottom: 1px solid #111;
@@ -809,9 +853,6 @@ input[type=range]::-moz-range-thumb {
   margin-top: 2px;
 }
 
-/* ----------------------------------------- */
-/*  Folders and Subfolders
-/* ----------------------------------------- */
 li.folder > .folder-header,
 li.folder.collapsed > .folder-header {
   padding: .25rem .5rem;
@@ -854,9 +895,6 @@ li.folder > .folder-header h3 {
   margin-bottom: 1rem;
 }
 
-/* ----------------------------------------- */
-/*  1.0 - Chat Panel
-/* ----------------------------------------- */
 #chat {
   padding-bottom: 1rem;
 }
@@ -940,7 +978,6 @@ li.folder > .folder-header h3 {
   color: #4b4a44;
 }
 
-S
 #chat-log .message.whisper {
   background: #e8e8ef;
   border: 1px solid #545469;
@@ -966,9 +1003,40 @@ S
   overflow: hidden;
 }
 
+.dice-roll .dice-formula {
+  margin-bottom: 0;
+  border-radius: 3px 3px 0 0;
+}
+
+.dice-roll .dice-total {
+  border-top: none;
+  border-radius: 0 0 3px 3px;
+}
+
+.dice-roll .dice-total.success {
+  border-top: none;
+  background: rgba(0, 255, 0, 0.3);
+}
+
+.dice-roll .dice-total.failure {
+  border-top: none;
+  background: rgba(255, 0, 0, 0.3);
+}
+
 /* ----------------------------------------- */
-/*  2.0 - Combat Tracker
+/*  Dice Tooltip
 /* ----------------------------------------- */
+.dice-tooltip .part-formula {
+  padding: 2px 0 0 3px;
+}
+
+.dice-tooltip .dice-rolls {
+  margin: 0;
+  padding: 5px 0;
+  overflow: hidden;
+  border-bottom: 1px solid #999;
+}
+
 #combat #combat-round {
   padding: .5rem 1rem;
   border-bottom: 1px solid #444;
@@ -1024,9 +1092,6 @@ S
   border: 1px solid #ff6400;
 }
 
-/* ----------------------------------------- */
-/*  3.0 - Scenes Directory
-/* ----------------------------------------- */
 #scenes .scene {
   border: none;
   border-bottom: 1px solid #111;
@@ -1067,9 +1132,80 @@ S
   text-shadow: 0 0 8px red;
 }
 
-/* ----------------------------------------- */
-/*  6.0 - Journal
-/* ----------------------------------------- */
+#playlists .global-volume {
+  flex: 0 0 152px;
+}
+
+#playlists li.playlist {
+  padding: 1rem;
+  border-bottom: 1px solid #222;
+  border-top: none;
+}
+
+#playlists li.playlist .playlist-header {
+  align-items: center;
+  text-decoration: none;
+  padding-bottom: .25rem;
+  margin-bottom: .5rem;
+  border-bottom: 1px solid #444;
+}
+
+#sidebar #playlists li.playlist h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+#playlists li.sound {
+  margin: .5rem 0 0;
+  align-items: center;
+}
+
+#sidebar #playlists li.sound h4 {
+  font-size: .8rem;
+}
+
+#playlists li.sound .sound-controls {
+  padding-left: .5rem;
+}
+
+#compendium h3 {
+  padding: 1rem 1rem .25rem 1rem;
+  font-size: 1rem;
+  border-width: none;
+  border-bottom: 3px solid #666;
+  margin-bottom: .5rem;
+  background: none;
+}
+
+#compendium li.compendium-pack {
+  margin: 0;
+  padding: .5rem 2rem .5rem 1rem;
+}
+
+#compendium li.compendium-pack .pack-title {
+  margin: 0;
+}
+
+#compendium .compendium-footer {
+  font-size: .7rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-left: 23px;
+  margin-top: .1rem;
+}
+
+#compendium li.compendium-pack .status-icons {
+  position: absolute;
+  font-weight: normal;
+  color: #7a7971;
+  right: 1rem;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.app.sidebar-popout .window-content {
+  background: #333;
+}
+
 .window-app.image-popout .window-content {
   margin: 0;
   padding: 0;
@@ -1149,102 +1285,6 @@ S
   border: none;
 }
 
-/* ----------------------------------------- */
-/*  7.0 - Playlists
-/* ----------------------------------------- */
-#playlists .global-volume {
-  flex: 0 0 152px;
-}
-
-#playlists li.playlist {
-  padding: 1rem;
-  border-bottom: 1px solid #222;
-  border-top: none;
-}
-
-#playlists li.playlist .playlist-header {
-  align-items: center;
-  text-decoration: none;
-  padding-bottom: .25rem;
-  margin-bottom: .5rem;
-  border-bottom: 1px solid #444;
-}
-
-#sidebar #playlists li.playlist h4 {
-  margin: 0;
-  font-size: 1rem;
-}
-
-#playlists li.sound {
-  margin: .5rem 0 0;
-  align-items: center;
-}
-
-#sidebar #playlists li.sound h4 {
-  font-size: .8rem;
-}
-
-#playlists li.sound .sound-controls {
-  padding-left: .5rem;
-}
-
-/* ----------------------------------------- */
-/*  8.0 - Compendium Packs
-/* ----------------------------------------- */
-#compendium h3 {
-  padding: 1rem 1rem .25rem 1rem;
-  font-size: 1rem;
-  border-width: none;
-  border-bottom: 3px solid #666;
-  margin-bottom: .5rem;
-  background: none;
-}
-
-#compendium li.compendium-pack {
-  margin: 0;
-  padding: .5rem 2rem .5rem 1rem;
-}
-
-#compendium li.compendium-pack .pack-title {
-  margin: 0;
-}
-
-#compendium .compendium-footer {
-  font-size: .7rem;
-  color: rgba(255, 255, 255, 0.5);
-  margin-left: 23px;
-  margin-top: .1rem;
-}
-
-#compendium li.compendium-pack .status-icons {
-  position: absolute;
-  font-weight: normal;
-  color: #7a7971;
-  right: 1rem;
-  top: 50%;
-  transform: translate(0, -50%);
-}
-
-/**
- * Single Compendium Pack
- */
-/* ----------------------------------------- */
-/*  Settings                                 */
-/* ----------------------------------------- */
-/* See FVTT UII Game Settings Module */
-/**
- * Role Permission Configuration Form
- */
-/* ----------------------------------------- */
-/*  Sidebar Pop-out                          */
-/* ----------------------------------------- */
-.app.sidebar-popout .window-content {
-  background: #333;
-}
-
-/* ----------------------------------------- */
-/*  Module Management                        */
-/* ----------------------------------------- */
 .package-list {
   padding: 0 1rem 1rem 1rem;
 }
@@ -1288,6 +1328,11 @@ S
 
 #module-management .package-list .package-metadata {
   list-style: none;
+}
+
+/* Module Settings List */
+#client-settings section.content .settings-list {
+  /*max-height: unset;*/
 }
 
 /* 5e specific theme */

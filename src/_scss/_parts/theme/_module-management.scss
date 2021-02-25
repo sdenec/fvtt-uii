@@ -1,0 +1,49 @@
+.package-list {
+  padding: 0 1rem 1rem 1rem;
+}
+
+.package-list .package {
+  position: relative;
+  padding: 1rem 0;
+  border-top: none;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+}
+
+.package-list .package:last-child {
+  border: none;
+}
+
+#module-management .package-list .package .package-metadata,
+.package-list .package .package-overview .package-description,
+.package-list .package .package-tags {
+  flex: 1 1 100%;
+  margin: 0;
+  line-height: 1.5;
+  margin-left: calc(13px + 1rem);
+  margin-top: .25rem;
+}
+
+.package-list .package .package-tags {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  text-align: left;
+  order: 1;
+  margin-top: .5rem;
+}
+
+.package-list .package .tag {
+  font-size: 11px;
+  margin: 0 .25rem 0 0;
+  padding: 1px 4px 0;
+  line-height: 16px;
+}
+
+#module-management .package-list .package-metadata {
+  list-style: none;
+}
+
+/* Module Settings List */
+#client-settings section.content .settings-list {
+  /*max-height: unset;*/
+}

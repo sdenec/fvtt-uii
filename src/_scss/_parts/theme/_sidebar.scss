@@ -1,0 +1,144 @@
+#sidebar {
+  right: 0;
+  top: 0;
+  height: 100vh;
+  background: #333;
+  /*additions*/
+  border: none;
+  border-left: 1px solid #111;
+  border-radius: 0;
+  transition: border-radius .3s ease;
+  overflow: visible;
+  z-index: 100;
+}
+
+#sidebar.collapsed {
+  border-radius: 0 0 0 5px;
+  padding: 0;
+}
+
+#sidebar-tabs {
+  margin: 0;
+  border-bottom: 1px solid #111;
+  box-shadow: 0 0 10px #000;
+  z-index: 1;
+  padding: 0 8px 0 4px;
+  /*justify-content: flex-end;*/
+  justify-content: space-around;
+  height: 30px;
+  flex: 0 0 30px;
+}
+
+#sidebar.collapsed #sidebar-tabs {
+  padding: 0;
+}
+
+#sidebar-tabs>.item {
+  cursor: url(../cursor/cursor_pointer-rc.cur), auto;
+}
+
+#sidebar.collapsed #sidebar-tabs>.item {
+  padding: 0;
+  flex: 0 0 30px;
+}
+
+#sidebar-tabs>.item {
+  position: relative;
+  height: 28px;
+  flex: 1 0 22px;
+  line-height: 28px;
+  border: 1px solid transparent;
+  border-radius: 0;
+}
+
+#sidebar.collapsed #sidebar-tabs>.item.active,
+#sidebar-tabs>.item.active {
+  border: transparent;
+  box-shadow: none;
+  color: #ff6400;
+}
+
+#sidebar-tabs>.collapse {
+  border-radius: 0 0 0 16px;
+  position: absolute;
+  top: 0;
+  left: -16px;
+  height: 30px;
+  width: 16px;
+  line-height: 28px;
+  border-radius: 0 0 0 5px;
+  border: 1px solid #111;
+  border-right: none;
+  background: #333;
+}
+
+/*#sidebar-tabs > .item.active,
+#sidebar.collapsed #sidebar-tabs > .item.active {
+  border: 1px solid #ff6400;
+  box-shadow: 0 0 6px inset #ff6400;
+  border-radius: 0;
+}
+*/
+.sidebar-tab .directory-header {
+  padding: .5rem 1rem;
+}
+
+.sidebar-tab .directory-list .directory-item h3,
+.sidebar-tab .directory-list .directory-item h4 {
+  font-size: .8rem;
+}
+
+.sidebar-tab .directory-list .directory-item img {
+  flex: 0 0 40px;
+  height: 40px;
+  width: 40px;
+  overflow: hidden;
+  object-position: 50% 50%;
+  margin: 4px .5rem 4px .5rem;
+  border: 1px solid #222;
+  border-radius: .25rem;
+  background: rgba(255, 255, 255, .25);
+}
+
+#sidebar .sidebar-tab .directory-list .directory-item h4 {
+  margin-left: .5rem;
+}
+
+#sidebar .sidebar-tab .directory-list .directory-item img+h4 {
+  margin-left: 0;
+}
+
+.sidebar-tab .directory-list .entity {
+  border: none;
+}
+
+/*
+.sidebar-tab .directory-list .entity,
+.sidebar-tab .directory-list .entity:last-child,
+.sidebar-tab .directory-list .folder + .entity {
+  border: none;
+}
+*/
+
+.sidebar-tab .directory-footer {
+  margin: .5rem .25rem .5rem .25rem;
+}
+
+.sidebar-tab .directory-footer button {
+  margin: 0 .25rem .5rem .25rem;
+}
+
+.sidebar-tab .directory-list .subdirectory {
+  border-left: 1px solid rgba(255, 255, 255, .2);
+}
+
+.sidebar-tab .directory-list .subdirectory .directory-item {
+  border: none;
+  position: relative;
+}
+
+.sidebar-tab .directory-list .subdirectory .directory-item.folder {
+  border-top: none;
+  border-bottom: none;
+  margin-top: 2px;
+}

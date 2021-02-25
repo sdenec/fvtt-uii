@@ -1,0 +1,33 @@
+#compendium h3 {
+  padding: 1rem 1rem .25rem 1rem;
+  font-size: 1rem;
+  border-width: none;
+  border-bottom: 3px solid #666;
+  margin-bottom: .5rem;
+  background: none;
+}
+
+#compendium li.compendium-pack {
+  margin: 0;
+  padding: .5rem 2rem .5rem 1rem;
+}
+
+#compendium li.compendium-pack .pack-title {
+  margin: 0;
+}
+
+#compendium .compendium-footer {
+  font-size: .7rem;
+  color: rgba(255, 255, 255, .5);
+  margin-left: 23px;
+  margin-top: .1rem;
+}
+
+#compendium li.compendium-pack .status-icons {
+  position: absolute;
+  font-weight: normal;
+  color: #7a7971;
+  right: 1rem;
+  top: 50%;
+  transform: translate(0, -50%);
+}

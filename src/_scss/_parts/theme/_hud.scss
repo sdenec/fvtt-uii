@@ -1,0 +1,108 @@
+#token-hud .col {
+  height: calc(100% + 100px);
+  top: -50px;
+}
+
+#token-hud .col.left {
+  transform: translateX(-100%);
+  justify-content: flex-end;
+  align-items: flex-end;
+  left: -10px;
+}
+
+#token-hud .col.right {
+  justify-content: flex-end;
+  align-items: flex-start;
+  transform: translateX(100%);
+  right: -10px;
+}
+
+#token-hud .attribute.elevation {
+  position: relative;
+  width: 80px;
+  margin: 0 0 8px 0;
+}
+
+#token-hud .attribute i.fas {
+  top: -4px;
+  left: -1px;
+  font-size: 18px;
+  color: #FFF;
+  text-shadow: 0 0 4px #111;
+}
+
+#token-hud .control-icon.effects {
+  position: relative;
+}
+
+#token-hud .status-effects {
+  padding: 0;
+  width: 240px;
+  grid-template-columns: 40px 40px 40px 40px 40px 40px;
+  background: #444;
+  box-shadow: none;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#token-hud .status-effects .effect-control {
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+}
+
+#token-hud .status-effects .effect-control.active {
+  opacity: 1;
+  border: 1px solid #ff6400;
+}
+
+#token-hud .status-effects .effect-control.overlay {
+  opacity: 1;
+  background: #B94900;
+  border: 1px solid transparent;
+}
+
+// PLACEABLES
+
+.placeable-hud input[type="text"] {
+  background: #444;
+  box-shadow: none;
+  border-radius: 5px;
+}
+
+.placeable-hud .control-icon {
+  box-sizing: border-box;
+  margin: 8px 0;
+  padding: 4px;
+  font-size: 24px;
+  height: 40px;
+  background: #444;
+  box-shadow: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.placeable-hud .control-icon i.fas {
+  position: static;
+}
+
+.placeable-hud .control-icon:first-child {
+  margin-top: 0;
+}
+
+.placeable-hud .control-icon:last-child {
+  margin-bottom: 0;
+}
+
+.placeable-hud .control-icon.active {
+  color: #fff;
+  border: 1px solid #ff6400;
+  background: #B94900;
+}
+
+.placeable-hud .control-icon.active>img {
+  opacity: 1;
+}

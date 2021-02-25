@@ -1,0 +1,47 @@
+#players {
+  background: #444;
+  left: 16px;
+  bottom: 16px;
+  width: 160px;
+
+  h3 {
+    margin: 0;
+    padding: 1px 3px 2px 4px;
+    border-bottom: 1px solid #333;
+    cursor: pointer;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+
+    i {
+      margin: 0 4px 0 0;
+    }
+
+    .players-mode {
+      margin-left: auto;
+    }
+  }
+
+  ol {
+    margin: 1px 0 0 0;
+
+    li.player {
+      font-size: 12px;
+      line-height: 12px;
+      padding: 2px 4px;
+      cursor: url(../cursor/cursor_default-rc.cur),auto;
+
+      &:hover {
+        background: rgba(0, 0, 0, .2);
+      }
+    }
+
+    .player-name {
+      line-height: 1;
+    }
+
+    .player-active {
+      margin: 1px 8px 0 3px;
+    }
+  }
+}

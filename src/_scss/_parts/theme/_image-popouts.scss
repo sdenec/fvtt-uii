@@ -1,0 +1,78 @@
+.window-app.image-popout .window-content {
+  margin: 0;
+  padding: 0;
+  background: #333;
+}
+
+.window-app.image-popout form {
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.window-app.image-popout .lightbox-image {
+  flex: 1;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  margin: 20px;
+}
+
+.window-app.image-popout .form-group {
+  position: static;
+  width: 100%;
+  max-width: initial;
+  border-radius: 0;
+  flex: 0;
+  height: 32px;
+}
+
+.window-app.image-popout .form-group.title {
+  top: 0;
+  order: -1;
+  margin: 0;
+}
+
+.window-app.image-popout .form-group.title input {
+  height: 32px;
+  text-align: center;
+  width: 100%;
+  flex: 1;
+  border-radius: 0;
+  padding: 0 16px;
+  border: none;
+}
+
+.window-app.image-popout .form-group.picker {
+  bottom: 0;
+  margin: 0;
+  height: 52px;
+  padding: 0 20px 20px 20px;
+  order: -1;
+  margin: 1px 0 0 0;
+}
+
+.window-app.image-popout .form-group button {
+  flex: 0 0 32px;
+  height: 32px;
+  margin: 0 0 0 1px;
+  order: 3;
+  border-radius: 0;
+  border: none;
+}
+
+.window-app.image-popout .form-group.picker input {
+  flex: 1;
+  background: rgba(255, 255, 240, .8);
+}
+
+.window-app.image-popout .form-group.picker button.file-picker+input[type="text"] {
+  height: 32px;
+  margin-right: 0 !important;
+  border-radius: 0;
+  padding: 0 16px;
+  border: none;
+}

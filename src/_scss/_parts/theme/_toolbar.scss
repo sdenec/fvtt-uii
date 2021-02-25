@@ -1,0 +1,72 @@
+#controls {
+  top: 70px;
+  left: 16px;
+  padding: 0;
+  border: 1px solid #333;
+  border-radius: 5px;
+
+  .control-tools {
+    top: -1px;
+    left: 33px;
+    border: 1px solid #333;
+    border-radius: 5px;
+  }
+
+  .scene-control,
+  .control-tool {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 18px;
+    background: #333;
+    box-shadow: none;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    overflow: hidden;
+  }
+
+  .scene-control i,
+  .control-tool i {
+    font-size: 14px;
+  }
+
+  .scene-control:first-child,
+  .control-tool:first-child {
+    border-radius: 4px 4px 0 0;
+  }
+
+  .scene-control:last-child,
+  .control-tool:last-child {
+    border: none;
+    border-radius: 0 0 4px 4px;
+  }
+
+  .scene-control.active,
+  .control-tool.active,
+  .scene-control:hover,
+  .control-tool:hover {
+    border: none;
+    box-shadow: none;
+    color: #ff6400;
+  }
+
+  .scene-control.active>i,
+  .control-tool.active>i,
+  .scene-control:hover>i,
+  .control-tool:hover>i {
+    text-shadow: 0 0 10px red;
+  }
+
+  .control-tool.toggle {
+    background: rgba(30, 0, 60, 1);
+    border: none;
+  }
+
+  .control-tool.toggle.active,
+  .control-tool.toggle:hover {
+    background: rgba(60, 0, 120, 1);
+    box-shadow: none;
+  }
+
+}//#controls

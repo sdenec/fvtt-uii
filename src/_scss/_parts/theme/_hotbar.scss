@@ -1,0 +1,108 @@
+#hotbar {
+  bottom: 16px;
+  left: 186px;
+  height: 40px;
+  width: 454px;
+  
+  .bar-controls {
+    background: #444;
+    box-shadow: none;
+    border-radius: 0;
+    margin: 0;
+
+  }
+  
+  #hotbar-directory-controls {
+    border-radius: 5px 0 0 5px;
+    
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      line-height: 20px;
+    }
+  }
+  
+  #hotbar-page-controls {
+    border-radius: 0 5px 5px 0;
+
+    a.page-control {
+      font-size: 13px;
+      line-height: 13px;
+      height: 13px;
+    }
+  
+    .page-number {
+      font-size: 12px;
+      line-height: 12px;
+    }
+  }
+
+  #action-bar {
+    height: 40px;
+  }
+  
+  #macro-list {
+    flex: 0 0 389px;
+    margin: 0;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+  }
+  
+  .macro {
+    box-sizing: content-box;
+    border: none;
+    border-left: 1px solid #000;
+    border-radius: 0;
+    background: #444;
+    transition: box-shadow .3s ease;
+    cursor: url(../cursor/cursor_pointer-rc.cur), auto;
+    flex: 0 0 38px;
+    height: 38px;
+
+    &:first-child {
+      border: none;
+    }
+    
+    &:hover,
+    &.active:hover {
+      border: none;
+      border-left: 1px solid #000;
+
+      &:first-child {
+        border-left: none;
+      }
+    }
+    
+    &.active:hover {
+      box-shadow: 0 0 10px #ff6400 inset;
+    }
+
+    .macro-key {
+      top: 0;
+      right: 0;
+      padding: 1px 3px 2px 4px;
+      font-size: 12px;
+      border-radius: 0 0 0 7px;
+      font-weight: normal;
+      transition: color .3s ease;
+    }
+    
+    &:hover .macro-key {
+      color: #ff6400;
+    }
+
+    .macro-icon {
+      width: 100%;
+      height: 100%;
+      transition: border;
+    }
+    
+    &:hover .macro-icon {
+      border: 1px solid #ff6400;
+    }
+
+  }//.macro  
+
+}//#hotbar
