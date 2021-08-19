@@ -2,6 +2,10 @@
 
 Changelog
 
+## Version 0.1.4 ##
+- Token Action Hud background fix
+- Controls Submenu border fix
+
 ## Version 0.1.1 ##
 
 - File System restructured

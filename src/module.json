@@ -5,7 +5,7 @@
   "author": "sdenec",
   "version": "0.1.1",
   "minimumCoreVersion": "0.7.6",
-  "compatibleCoreVersion": "0.7.9",
+  "compatibleCoreVersion": "0.8.9",
   "system": "dnd5e",
   "styles": [
   	"./css/tidy_ui_theme.css"
